@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pageindex-selfhosted"
+version = "0.1.0"
+description = "Self-hosted PageIndex package for CASN"
+requires-python = ">=3.12"
+dependencies = [
+    "litellm==1.83.7",
+    "pymupdf==1.26.4",
+    "PyPDF2==3.0.1",
+    "python-dotenv==1.2.2",
+    "pyyaml==6.0.2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["pageindex"]
